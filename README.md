@@ -10,35 +10,44 @@ This Zkapp provides Zero-Knowledge (ZK) proof-based secure messaging on the Mina
 ## File Structure
 
 **app.ts:**
+
     * The main entry point for Zkapp.
     * Imports basic ZK libraries.
     * Deploys zkProof and zkVerifier contracts.
     * Initializes the `Chat` component for the messaging interface.
 
 **components/Chat.tsx:**
+
     * Primary messaging interface.
     * Processes user input for sending messages.
     * Handles ZK proof generation and verification logic.
 
 **components/Message.tsx:**
+
     * Creates individual messages in chat history.
 
 **components/User.tsx:**
+
     * Shows user information (username, public key, etc.).
 
 **contracts/zkProof.ts:**
+
     **o1js** module containing the logic to generate ZK proofs for message authenticity.
 
 **contracts/zkVerifier.ts:**
+
     **o1js** module defining the logic for validating ZK proofs.
 
 **node_modules:**
+
     * Contains **o1js** and other project dependencies.
 
 **package.json:**
+
     * lists project dependencies and configurations for Zkapp and Mina Berkeley Network.
 
 **tests/Chat.test.ts:**
+
     * Unit tests to ensure Zkapp functionality and robustness.
 
 ## Additional Features
