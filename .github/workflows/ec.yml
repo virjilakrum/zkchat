@@ -1,0 +1,46 @@
+
+# \  /. _..| _ |  _    _ 
+#  \/ || |||(_||(| |_||||
+#        /               
+
+
+
+name: Eliptic Chat
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Node.js setup
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: npm i
+        run: npm install
+
+      - name: execute test
+        run: npm test
+
+      - name: build zkapp
+        run: npm run build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: demolution for zkapp :)
+
+        # run: ./deploy.sh
+
