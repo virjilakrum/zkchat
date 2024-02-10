@@ -1,7 +1,7 @@
 # Eliptic-Chat Fully Trustless(Zero-Knowledge)
  An application for real-time messaging between users using WebSocket, including a basic backend server and logic for encrypting and authenticating messages with zero-knowledge proof using **o1js**.
 
-# ZK Messaging O1js with Zkapp (Mina Berkeley Network)
+# ZK Messaging o1js with Zkapp (Mina Berkeley Network)
 
 ## Description
 
@@ -27,10 +27,10 @@ This Zkapp provides Zero-Knowledge (ZK) proof-based secure messaging on the Mina
     * Shows user information (username, public key, etc.).
 
 **contracts/zkProof.ts:**
-    * **o1js** module containing the logic to generate ZK proofs for message authenticity.
+    **o1js** module containing the logic to generate ZK proofs for message authenticity.
 
 **contracts/zkVerifier.ts:**
-    * **o1js** module defining the logic for validating ZK proofs.
+    **o1js** module defining the logic for validating ZK proofs.
 
 **node_modules:**
     * Contains **o1js** and other project dependencies.
