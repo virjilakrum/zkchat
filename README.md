@@ -43,9 +43,9 @@ This Zkapp provides Zero-Knowledge (ZK) proof-based secure messaging on the Mina
 
 ## Additional Features
 
-* User authentication:** Securely identify users before exchanging messages.
-* Message history:** Store and retrieve past messages for reference.
-* Group chats:** Support messaging between groups of users.
+* **User authentication:** Securely identify users before exchanging messages.
+* **Message history:** Store and retrieve past messages for reference.
+* **Group chats:** Support messaging between groups of users.
 
 ## Example Usage
 
