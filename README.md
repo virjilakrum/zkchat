@@ -11,6 +11,8 @@ This Zkapp provides Zero-Knowledge (ZK) proof-based secure messaging on the Mina
 
 ## File Structure
 
+<img width="191" alt="Ekran Resmi 2024-02-14 16 43 49" src="https://github.com/virjilakrum/zkchat/assets/158029357/85f88ed0-63ed-4669-a4b9-4f63f60f4391">
+
 **app.ts:**
 
     * The main entry point for Zkapp.
