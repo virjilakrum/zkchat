@@ -1,5 +1,7 @@
 # Eliptic-Chat Fully Trustless(Zero-Knowledge)
  An application for real-time messaging between users using WebSocket, including a basic backend server and logic for encrypting and authenticating messages with zero-knowledge proof using **o1js**.
+ 
+![diagram(31)](https://github.com/virjilakrum/zkchat/assets/158029357/18eb3470-d817-4f00-87ab-8e798916699c)
 
 # ZK Messaging o1js with Zkapp (Mina Berkeley Network)
 
