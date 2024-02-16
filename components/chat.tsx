@@ -8,42 +8,42 @@ interface ChatProps {
   zkVerifierAddress: PublicKey;
 }
 
-interface Message { // Mesajlar için interface
+interface Message { 
   message: string;
   isVerified: boolean;
-  timestamp: firebase.firestore.Timestamp; // Firebase için timestamp  
+  timestamp: firebase.firestore.Timestamp; 
 }
 
 const Chat: React.FC<ChatProps> = ({ zkProofAddress, zkVerifierAddress }) => {
-  const [messages, setMessages] = useState<Message[]>([]); // Doğru tip ataması
+  const [messages, setMessages] = useState<Message[]>([]); 
   const [message, setMessage] = useState('');
-  const [isLoading, setIsLoading] = useState(false); // Yükleme durumu eklendi
+  const [isLoading, setIsLoading] = useState(false); 
 
   useEffect(() => {
     async function loadMessages() {
-      setIsLoading(true); // Yükleme başlangıcı 
+      setIsLoading(true); 
 
-      const db = firebase.firestore(); // Firebase Firestore bağlantısı
+      const db = firebase.firestore(); 
 
-      // Query Snapshot işlemi - Veritabanı sorgusu burada yer alır 
+      
       const querySnapshot = await db.collection('messages').orderBy('timestamp').get();
       const messagesData = querySnapshot.docs.map((doc) => ({
         ...doc.data(),
-        timestamp: doc.data().timestamp.toDate(), // Firebase timestamp dönüşümü
+        timestamp: doc.data().timestamp.toDate(), 
       }));
 
       setMessages(messagesData as Message[]);  
-      setIsLoading(false); // Yükleme işleminin tamamlandığının belirtilmesi 
+      setIsLoading(false); 
     }
 
-    loadMessages(); // Fonksiyonun ilk render sonrası tetiklenmesi  
+    loadMessages(); 
   }, []);
 
   const sendMessage = async () => {
 
     const proof = zkProof.generateProof(message);
 
-    // ... Mesajı ve proof'u veritabanına kaydetme kodları eklenecek
+    // Mesajı ve proof'u veritabanına kaydetme kodları eklenecek
 
 
     const isVerified = await zkVerifier.verifyProof(proof, message);
